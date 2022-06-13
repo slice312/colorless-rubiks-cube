@@ -1,0 +1,67 @@
+@import "styles/null.css";
+@import "buttons.css";
+@import "input.scss";
+
+
+
+.cube {
+    height: 650px;
+    width: 100%;
+    background-color: red;
+    background-image: url("assets/images/cube.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.ali {
+    height: 500px;
+    width: 1000px;
+}
+h2 {
+    font-size: 52px;
+}
+body {
+    background-color: red;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    font-size: 55px;
+    color: green;
+}
+
+.btn-default {
+    font-size: 25px;
+    width: 180px;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+.btn-default:active {
+    transform: scale(0.8);
+}
+
+
+.btn-default:hover {
+    background-color: gray;
+}
+
+.btn-default:active {
+    transform: scale(0.98);
+}
+
+.btn-default:focus {
+    outline: 2px solid blue;
+}
+
+.btn-default:disabled {
+    pointer-events: none;
+    background-color: gray;
+}

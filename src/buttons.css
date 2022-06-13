@@ -1,0 +1,46 @@
+.btn-default {
+    color: var(--text-color-primary2);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 2px;
+
+    background-color: var(--color-primary);
+    border-radius: 4px;
+}
+
+.btn-default:hover {
+    background-color: var(--color-dark-gray);
+}
+
+.btn-default:active {
+    transform: scale(0.98);
+}
+
+.btn-default:focus {
+    outline: 2px solid var(--color-ui-focus-outline);
+}
+
+.btn-default:disabled {
+    pointer-events: none;
+    background-color: gray;
+}
+
+
+
+.burger-menu-btn {
+    /* TODO убрать*/
+    display: none;
+    background-color: transparent;
+}
+
+.burger-menu-btn__icon {
+    fill: var(--color-theme-text-primary);
+    background-color: var(--color-bg1)
+}
+
+.burger-menu-btn:hover svg {
+    background-color: var(--color-bg3);
+    border-radius: 50%;
+}
+
