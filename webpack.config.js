@@ -1,7 +1,30 @@
 const path = require("path");
+const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const pagesDir = `${path.resolve(__dirname, "src")}/pages/`;
+
+const enumerate = (dir, f) => {
+    const pages = fs.readdirSync(dir)
+        .flatMap(filename => {
+            const pa = path.join(dir, filename);
+            const stat = fs.statSync(pa);
+            if (stat.isDirectory())
+                return enumerate(pa, path.join(f, filename));
+            return (f)
+                ? path.join(f, filename)
+                : filename;
+        })
+        .filter(fileName => fileName.endsWith(".pug"));
+
+    return pages;
+
+    console.log("alo");
+};
+
+
+const pagesss = enumerate(pagesDir, "");
 
 module.exports = (env, argv) => {
     return (argv.mode === "production")
@@ -10,6 +33,9 @@ module.exports = (env, argv) => {
 };
 
 
+console.log("ROOT", path.resolve(__dirname, "src"));
+console.log("ASSETS", path.resolve(__dirname, "src", "assets"));
+
 const devConfig = {
     mode: "development",
     devtool: "source-map",
@@ -17,6 +43,7 @@ const devConfig = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "./build"),
+        // publicPath: path.resolve(__dirname, "src"),
         clean: true,
         assetModuleFilename: (pathData) => {
             const filepath = path
@@ -27,6 +54,14 @@ const devConfig = {
             return `${filepath}/[name][ext][query]`;
         }
     },
+    // resolve: {
+    //     modules: [
+    //         path.resolve(__dirname, "src")
+    //     ],
+    //     alias: {
+    //         assets: path.resolve(__dirname, "src/assets")
+    //     }
+    // },
     devServer: {
         port: 5007,
         static: "./build",
@@ -34,10 +69,14 @@ const devConfig = {
         watchFiles: ["./src/index.pug"]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            filename: "index.html",
-            template: "./src/index.pug"
-        }),
+        ...pagesss.map(
+            (page) => {
+                return new HtmlWebpackPlugin({
+                    template: path.join(pagesDir, page),
+                    filename: `./${path.basename(page.replace(/\.pug/, ".html"))}`,
+                });
+            }
+        ),
         new MiniCssExtractPlugin({
             filename: "index.css"
         })
@@ -47,12 +86,15 @@ const devConfig = {
             {
                 test: /\.(pug)$/, // TODO: тут если че добавить html в регекс
                 use: [
-                    {loader: "html-loader"},
+                    {
+                        loader: "html-loader",
+                    },
                     {
                         loader: "pug-html-loader",
                         options: {
                             // exports: false, // TODO: хз для чего
-                            pretty: true // чтобы код html не минифицировался
+                            pretty: true, // чтобы код html не минифицировался
+                            basedir: path.resolve(__dirname),
                         }
                     }
                 ]
