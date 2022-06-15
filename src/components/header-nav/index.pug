@@ -1,15 +1,29 @@
-.header-nav
-    //img.header-nav__logo(src="assets/icons/company-header-logo.svg" alt="company-header-logo")
-    ul.header-nav__menu
-        li.header-nav__menu-item
-            a(href="#") Консультации
-        li.header-nav__menu-item
-            a(href="#") Услуги
-        li.header-nav__menu-item
-            a(href="#") Треннинги
-        li.header-nav__menu-item
-            a(href="#") Блог
-    ul.header-nav__social-links
-        li.header-nav__social-links-item f
-        li.header-nav__social-links-item w
-        li.header-nav__social-links-item t
+//nav..header-nav
+//    //img.header-nav__logo(src="assets/icons/company-header-logo.svg" alt="company-header-logo")
+//    ul.header-nav__menu
+//        li.header-nav__menu-item
+//            a(href="#") Консультации
+//        li.header-nav__menu-item
+//            a(href="#") Услуги
+//        li.header-nav__menu-item
+//            a(href="#") Треннинги
+//        li.header-nav__menu-item
+//            a(href="#") Блог
+//    ul.header-nav__social-links
+//        li.header-nav__social-links-item f
+//        li.header-nav__social-links-item w
+//        li.header-nav__social-links-item t
+
+nav.navbar.navbar-expand-md.header-nav
+    .container-fluid
+        img.header-nav__logo(src="/src/assets/icons/cube.svg" alt="cube")
+        p.header-nav__logo-title Бизнес практика
+        a.navbar-brand(href='#') Navbar
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.nav-item
+                    a.nav-link.active(aria-current='page' href='#') Home
+                li.nav-item
+                    a.nav-link(href='#') Link

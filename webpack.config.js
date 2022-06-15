@@ -85,8 +85,8 @@ const devConfig = {
             {
                 test: /\.(s)?css$/,
                 use: [
-                    // MiniCssExtractPlugin.loader, // TODO: вернуть этот лоадер и убрать style-loader в итоговом билде
-                    "style-loader",
+                    MiniCssExtractPlugin.loader, // TODO: вернуть этот лоадер и убрать style-loader в итоговом билде
+                    // "style-loader",
                     "css-loader",
                     {
                         loader: "postcss-loader",

@@ -1,7 +1,6 @@
-// import "./index.css";
+import "./styles/init/index.scss";
+import "./components/index.js";
 
-
-
-console.log("INDeX js");
+console.log("Main js file loaded");
 
 

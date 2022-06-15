@@ -1,7 +1,23 @@
-.header-nav {
-    &__logo {
+@import "/src/styles/mixins";
+@import "/src/styles/init/global";
 
+
+.header-nav {
+    height: 70px;
+    background-color: red;
+
+
+    &__logo {
+        width: 27px;
+        height: 29px;
     }
+
+    &__logo-title {
+        width: 91px;
+        @include font-face(Lato, 700, 16px, 14px, $color-text-primary-1);
+        text-transform: uppercase;
+    }
+
 
     &__menu {
 
@@ -10,6 +26,8 @@
     &__menu-item {
         color: red;
         text-transform: uppercase;
+        @include font-face(Lato, 14px, 600, 17px, black);
+
     }
 
     &__social-links {
