@@ -1,30 +1,27 @@
-const path = require("path");
 const fs = require("fs");
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const pagesDir = `${path.resolve(__dirname, "src")}/pages/`;
 
-const enumerate = (dir, f) => {
-    const pages = fs.readdirSync(dir)
+
+const getPugPages = (dir, relativePath) => {
+    return fs.readdirSync(dir)
         .flatMap(filename => {
-            const pa = path.join(dir, filename);
-            const stat = fs.statSync(pa);
-            if (stat.isDirectory())
-                return enumerate(pa, path.join(f, filename));
-            return (f)
-                ? path.join(f, filename)
+            const filePath = path.join(dir, filename);
+            if (fs.statSync(filePath).isDirectory())
+                return getPugPages(filePath, path.join(relativePath, filename));
+
+            return (relativePath)
+                ? path.join(relativePath, filename)
                 : filename;
         })
         .filter(fileName => fileName.endsWith(".pug"));
-
-    return pages;
-
-    console.log("alo");
 };
 
 
-const pagesss = enumerate(pagesDir, "");
+const pages = getPugPages(pagesDir, "");
 
 module.exports = (env, argv) => {
     return (argv.mode === "production")
@@ -33,9 +30,6 @@ module.exports = (env, argv) => {
 };
 
 
-console.log("ROOT", path.resolve(__dirname, "src"));
-console.log("ASSETS", path.resolve(__dirname, "src", "assets"));
-
 const devConfig = {
     mode: "development",
     devtool: "source-map",
@@ -43,7 +37,6 @@ const devConfig = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "./build"),
-        // publicPath: path.resolve(__dirname, "src"),
         clean: true,
         assetModuleFilename: (pathData) => {
             const filepath = path
@@ -54,14 +47,6 @@ const devConfig = {
             return `${filepath}/[name][ext][query]`;
         }
     },
-    // resolve: {
-    //     modules: [
-    //         path.resolve(__dirname, "src")
-    //     ],
-    //     alias: {
-    //         assets: path.resolve(__dirname, "src/assets")
-    //     }
-    // },
     devServer: {
         port: 5007,
         static: "./build",
@@ -69,14 +54,12 @@ const devConfig = {
         watchFiles: ["./src/index.pug"]
     },
     plugins: [
-        ...pagesss.map(
-            (page) => {
-                return new HtmlWebpackPlugin({
-                    template: path.join(pagesDir, page),
-                    filename: `./${path.basename(page.replace(/\.pug/, ".html"))}`,
-                });
-            }
-        ),
+        ...pages.map((page) => {
+            return new HtmlWebpackPlugin({
+                template: path.join(pagesDir, page),
+                filename: `./${path.basename(page.replace(/\.pug/, ".html"))}`,
+            });
+        }),
         new MiniCssExtractPlugin({
             filename: "index.css"
         })
@@ -84,7 +67,7 @@ const devConfig = {
     module: {
         rules: [
             {
-                test: /\.(pug)$/, // TODO: тут если че добавить html в регекс
+                test: /\.(pug)$/,
                 use: [
                     {
                         loader: "html-loader",
@@ -93,7 +76,7 @@ const devConfig = {
                         loader: "pug-html-loader",
                         options: {
                             // exports: false, // TODO: хз для чего
-                            pretty: true, // чтобы код html не минифицировался
+                            pretty: true, // чтобы код html не минифицировался // TODO: хреново работает, между строками в паге в выходном файле нет пробелов
                             basedir: path.resolve(__dirname),
                         }
                     }
