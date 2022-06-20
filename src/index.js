@@ -1,6 +1,9 @@
 import "./styles/init/index.scss";
-import "./components/index.js";
+import {render}  from "./components";
 
 console.log("Main js file loaded");
 
 
+
+
+document.addEventListener("DOMContentLoaded", render);
