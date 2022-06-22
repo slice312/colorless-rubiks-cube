@@ -1,19 +1,8 @@
 section.services
     h1.services__title Услуги
     .services__list
-        .services__item1
-            a(href="service.html")
-                img.service__img(src="/src/assets/icons/services/plan.svg" alt="plan")
-                p.services__item-text Разрабатываем маркетинг-план: дорожная карта достижения целей
-        .services__item2
-            a(href="service.html")
-                img.service__img(src="/src/assets/icons/services/filament-lamp.svg" alt="filament-lamp")
-                p.services__item-text Повышаем эффективность продвижения: аудит существующей модели
-        .services__item3
-            a(href="service.html")
-                img.service__img(src="/src/assets/icons/services/chart.svg" alt="chart")
-                p.services__item-text Находим скрытую прибыль: анализ модели ценообразования
-        .services__item4
-            a(href="service.html")
-                img.service__img(src="/src/assets/icons/services/rocket.svg" alt="rocket")
-                p.services__item-text Запускаем новый проект: start-up маркетинг
+        each serv in gServices
+            .services__item
+                a(href=serv.url)
+                    img.services__img(src=serv.img alt="service-icon")
+                    p.services__item-text #{serv.text}
