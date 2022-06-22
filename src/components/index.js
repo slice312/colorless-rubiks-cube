@@ -1,3 +1,4 @@
+import "./common/buttons.scss";
 import {renderHeaderNavBar} from "./header-nav/index.js";
 
 

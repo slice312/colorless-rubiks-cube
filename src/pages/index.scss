@@ -1,0 +1,41 @@
+@import "/src/styles/mixins";
+@import "/src/styles/init/global";
+
+
+.preview {
+    margin-top: 93px;
+    background: url("/src/assets/images/bg-line-2.png") no-repeat left calc(42% + 25px) bottom 0px;
+    background-size: 606px 202px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 11px 0px 138px 0px;
+        background-size: 610px;
+        background: url("/src/assets/images/bg-line-1.png") no-repeat left 42% top 0px;
+    }
+
+    &__inform {
+        margin-top: 28px;
+        padding: 82px 0px 0px 30px;
+        background: url("/src/assets/images/bg-polygons.png") no-repeat;
+    }
+
+    &__title {
+        @include font-face(Montserrat, 700, 44px, 54px, $color-text-primary-1);
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @include font-face(Montserrat, 700, 30px, 37px, $color-text-primary-1);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-top: 23px;
+        margin-bottom: 32px;
+        width: 34vw;
+        @include font-face(Lato, 400, 22px, 26px, $color-text-primary-1);
+    }
+
+}
