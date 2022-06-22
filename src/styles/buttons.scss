@@ -1,0 +1,40 @@
+.btn-default {
+    font-size: 13px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border-radius: 32px;
+    background-color: var(--color-primary);
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-lighting);
+}
+
+.btn-default:active {
+    transform: scale(0.98);
+}
+
+.btn-default:focus {
+    outline: 1px solid var(--color-text-primary);
+}
+
+.btn-default:disabled {
+    pointer-events: none;
+    background-color: gray;
+}
+
+
+
+.burger-menu-btn {
+    background-color: transparent;
+}
+
+.burger-menu-btn__icon {
+    fill: #232425;
+    background-color: transparent;
+}
+
+.burger-menu-btn:hover svg {
+    background-color: #E5E5E5;
+    border-radius: 50%;
+}

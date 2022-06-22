@@ -83,7 +83,7 @@ const devConfig = {
                 ]
             },
             {
-                test: /\.(s)?css$/,
+                test: /\.s[ac]ss$/i,
                 use: [
                     MiniCssExtractPlugin.loader, // TODO: вернуть этот лоадер и убрать style-loader в итоговом билде
                     // "style-loader",

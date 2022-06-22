@@ -1,6 +1,7 @@
 import "./styles/init/index.scss";
-import "./pages/index.scss";
+import "./styles/index.scss";
 
+import "./pages/index.scss";
 
 import {render}  from "./components";
 
