@@ -1,11 +1,11 @@
 import "./styles/index.scss";
 
-import {burger} from "./components/header-nav/index.js";
+import {renderHeaderNav} from "./components/header-nav/index.js";
 
 
 
 const render = () => {
-    burger()
+    renderHeaderNav()
 }
 
 
