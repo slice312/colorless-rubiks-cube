@@ -1,6 +1,8 @@
-@import "./buttons";
-@import "./mixins";
-@import "/src/styles/init/global";
+@import "./common/null";
+@import "./common/fonts";
+@import "./common/vars";
+@import "./common/mixins";
+
 @import "/src/components/header-nav/index";
 
 .my-container {

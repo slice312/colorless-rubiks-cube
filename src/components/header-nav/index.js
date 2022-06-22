@@ -1,26 +1,15 @@
-// import "./index.scss";
+export const burger = () => {
+    const burgerMenu = document.getElementById("burger-menu");
 
+    const burgerBtnOpen = document.getElementById("burger-btn-open");
+    const burgerBtnClose = document.getElementById("burger-btn-close");
 
-export const renderHeaderNavBar = (appStoreLink) => {
-    setOpenCloseMenuHandlers();
-    setButtonsHandlers(appStoreLink);
-};
+    function toggleClassMenu(element) {
+        element.addEventListener('click', function () {
+            burgerMenu.classList.toggle('burger-menu_active');
+        })
+    }
 
-const setOpenCloseMenuHandlers = () => {
-    const btnBurgerMenu = document.getElementById("burger-menu-btn");
-    btnBurgerMenu.onclick = toggleMobileNavMenu;
-
-    // const navLinks = document.querySelectorAll("#header-nav-bar__menu a");
-    // Array.from(navLinks)
-    //     .forEach(x => x.onclick = toggleMobileNavMenu);
-};
-
-const toggleMobileNavMenu = () => {
-    const menu = document.getElementById("header-nav-bar");
-    menu.classList.toggle("header-nav__bar_active");
-};
-
-const setButtonsHandlers = (appStoreLink) => {
-    const btnGetApp = document.getElementById("nav-btn-get-app");
-    btnGetApp.onclick = () => window.open(appStoreLink, "_blank", "noopener,noreferrer");
-};
+    toggleClassMenu(burgerBtnOpen);
+    toggleClassMenu(burgerBtnClose);
+}

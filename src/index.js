@@ -1,13 +1,12 @@
-import "./styles/init/index.scss";
 import "./styles/index.scss";
 
-import "./pages/index.scss";
-
-import {render}  from "./components";
-
-console.log("Main js file loaded");
+import {burger} from "./components/header-nav/index.js";
 
 
+
+const render = () => {
+    burger()
+}
 
 
 document.addEventListener("DOMContentLoaded", render);
