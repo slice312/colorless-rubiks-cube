@@ -1,11 +1,3 @@
-@import "./common/null";
-@import "./common/fonts";
-@import "./common/vars";
-@import "./common/mixins";
-
-@import "/src/components/header-nav/index";
-
-.my-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+@import "./common";
+@import "/src/components";
+@import "/src/pages/index/index";

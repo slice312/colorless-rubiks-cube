@@ -1,0 +1,17 @@
+extends /src/layout
+
+
+block content
+    include /src/config/config
+    .container
+        .main
+            .main-bg
+                .start.col-6
+                    .start__title-first.col-12 Создаем решения
+                    .start__title-second.col-8   для роста бизнеса
+                    .start__subtitle.col-8 На основе анализа данных с алгоритмами реализации
+                    button.start__button Обсудить проблему
+                .cube.col-5
+                    img(src="/src/assets/icons/big-rubiks-cube.svg", alt="big-rubiks-cube")
+        include /src/components/mainPage/questions/index
+        include /src/components/mainPage/services/index
