@@ -1,153 +1,58 @@
-.main {
-    background: url("/src/assets/images/bg-line-2.png") no-repeat 30% 90%;
+.preview {
+    position: relative;
+    padding: 100px 0 140px;
 
-    .main-bg {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-top: 94px;
-        padding-bottom: 234px;
-        background: url("/src/assets/images/bg-line-1.png") no-repeat 32% 15%;
+    &__body {
+        position: relative;
     }
 
-    .start {
-        padding-left: 30px;
-        padding-top: 105px;
-        background: url("/src/assets/images/bg-polygons.png") no-repeat;
+    &__title {
+        position: relative;
+        @include font-face(Montserrat, 700, 44px, 54px, $color-text-primary-1);
+        text-transform: uppercase;
 
-        .start__title-first {
-            @include font-face(Montserrat, 700, 44px, 54px, $color-text-primary-1);
-            text-transform: uppercase;
-        }
-
-        .start__title-second {
+        span {
             @include font-face(Montserrat, 700, 30px, 37px, $color-text-primary-1);
-            text-transform: uppercase;
         }
+    }
 
-        .start__subtitle {
-            margin-top: 19px;
-            @include font-face(Lato, 400, 22px, 26px, $color-text-primary-1);
-        }
+    &__sub-title {
+        @include font-face(Lato, 400, 22px, 26px, $color-text-primary-1);
+    }
 
-        .start__button {
-            margin-top: 32px;
-            width: 264px;
-            height: 48px;
-            background: #47CF34;
-            border-radius: 8px;
-            border: 0px;
-            text-align: center;
+    &__img {
+        width: 41%;
+    }
 
-            @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
-            text-transform: uppercase;
-            transition: background 0.2s;
-
-            &:hover {
-                background: #30B01E;
-            }
-        }
+    &__btn {
+        @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
+        text-transform: uppercase;
+        text-align: center;
+        padding: 15px 32px 13px;
     }
 }
 
-@media (max-width:1200px) {
-    .main {
-        background-position: 50% 90%;
-
-        .main-bg {
-            .start {
-                .start__title-first {
-                    font-size: 40px;
-                }
-
-                .start__title-second {
-                    font-size: 26px;
-                }
-
-                .start__subtitle {
-                    font-size: 20px;
-                }
-            }
-        }
-    }
-
-    .cube {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .cube img {
-        width: 400px;
-    }
+.preview:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/assets/images/about-lines.svg");
+    background-position: 45% 88px;
+    background-repeat: no-repeat;
+    background-size: 55% 88%;
 }
 
-@media (max-width:993px) {
-
-    .cube img {
-        width: 350px;
-    }
-
-    .main {
-        background-size: 480px;
-        background-position: 50% 90%;
-
-        .main-bg {
-            background-size: 480px;
-            background-position: 56% 18%;
-        }
-    }
-}
-
-
-//@media (max-width:768px) {
-//    .main {
-//        background: url(../img/arrows.svg) no-repeat;
-//        background-position: 50% 90%;
-//
-//        .main-bg {
-//            background: none;
-//            flex-direction: column-reverse;
-//            align-items: center;
-//            padding-top: 45px;
-//            padding-bottom: 180px;
-//        }
-//
-//        .start {
-//            background: none;
-//            text-align: center;
-//            display: flex;
-//            flex-direction: column;
-//            align-items: center;
-//            padding: 0px;
-//            width: auto !important;
-//        }
-//    }
-//}
-
-
-@media(max-width:576px) {
-    .cube img {
-        width: 230px;
-    }
-
-    .start {
-        .start__title-first {
-            font-size: 28px;
-        }
-
-        .start__title-second {
-            font-size: 18px;
-        }
-
-        .start__subtitle {
-            margin-top: 16px;
-            font-size: 14px;
-        }
-
-        .start__button {
-            margin-top: 24px;
-        }
-    }
+.preview__title:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 140px;
+    height: 155px;
+    background-image: url("/src/assets/icons/two-polygons.svg");
+    transform: translateY(-50%) translateX(-12%);
 }

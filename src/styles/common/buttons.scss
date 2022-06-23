@@ -1,0 +1,18 @@
+.btn-default {
+    @include font-face(Montserrat, 400, 14px, 14px, $color-text-primary-2);
+    background: #47CF34;
+    border-radius: 8px;
+}
+
+.btn-default:hover {
+    background-color: #30B01E;;
+}
+
+.btn-default:active {
+    transform: scale(0.98);
+}
+
+.btn-default:disabled {
+    pointer-events: none;
+    background-color: gray;
+}

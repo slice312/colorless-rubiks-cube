@@ -12,15 +12,11 @@
         text-transform: uppercase;
     }
 
-    &__list {
+    &__items {
         display: grid;
         grid-template-columns: repeat(3, 4fr);
         grid-template-rows: 164px 328px;
         gap: 15px;
-
-        a {
-            text-decoration: none;
-        }
 
         div {
             background: #6CA7EF;
