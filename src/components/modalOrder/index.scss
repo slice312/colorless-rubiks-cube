@@ -1,0 +1,131 @@
+.modal-order {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    overflow: auto;
+    visibility: hidden;
+    background: rgba(0, 0, 0, .5);
+
+    &__wrapper {
+        width: 500px;
+        min-height: 100%;
+        margin: 0 auto;
+    }
+
+    &__container {
+        position: relative;
+        margin: 50px 0;
+        padding: 100px 90px 0 86px;
+        border-radius: 4px;
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+
+    &__btn-close {
+        position: absolute;
+        margin: 20px 0 0 20px;
+        left: 0;
+        top: 0;
+        cursor: pointer;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 34px;
+        @include font-face(Lato, 700, 22px, 26px, $color-text-primary-1);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    &__input-wrap {
+        margin-bottom: 23px;
+    }
+
+    &__input {
+        width: 310px;
+        height: 50px;
+        border: 1px solid #282C37;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        padding: 14px 21px;
+        @include font-face(Lato, 400, 18px, 22px, $color-text-primary-1);
+
+        &:focus {
+            border: 1px solid #087DF1;
+        }
+
+        &::placeholder {
+            font-style: italic;
+            color: $color-text-secondary-1;
+        }
+    }
+
+    &__input_error {
+        border: 1px solid #CF4747;
+    }
+
+    &__input-error-label {
+        height: 5px;
+        @include font-face(Lato, 400, 14px, 17px, #CF4747);
+        font-style: italic;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__input_multiline{
+        height: 200px;
+    }
+
+    &__btn-submit {
+        width: 310px;
+        text-align: center;
+        @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
+        text-transform: uppercase;
+        padding: 15px 0 13px 0;
+
+        &:disabled {
+            border: 1px solid #9FA7B0;
+            background-color: #9FA7B0;
+        }
+    }
+
+    &__success-label {
+        margin-top: 25px;
+        visibility: hidden;
+
+        p {
+            width: 250px;
+            @include font-face(Lato, 700, 18px, 22px, #30B01E);
+        }
+    }
+}
+
+.modal-order_open {
+    visibility: visible;
+}
+
+
+@media (max-width: 530px) {
+    .modal-order {
+        z-index: 10;
+        &__wrapper {
+            height: 100%;
+            width: 100%;
+        }
+
+        &__container {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            padding: 100px 0 0 0;
+        }
+    }
+}

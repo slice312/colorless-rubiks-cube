@@ -10,20 +10,4 @@ html(lang="ru")
         include /src/components/header-nav/index
         script(defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous")
         block content
-        #modal-order.modal-order
-            .modal-order__wrapper
-                #modal-order-container.modal-order__container
-                    img.modal-page__close(src='/src/assets/icons/x-mark.svg', alt='x-mark')
-                    .modal-page__item
-                        form.modal-page__form#modal-order-form(onsubmit='return false;')
-                            h2.modal-page__title Оставьте заявку
-                            div
-                                input.name#modal-order-input-name(type='text', placeholder='Ваше имя', name='name')
-                                span.warning-name-error#modal-order-input-name-err
-                            div
-                                input.email#modal-order-input-email(type='text', placeholder='Email', name='email')
-                                span.warning-name-error#modal-order-input-email-err
-                            div
-                                textarea.big-text#modal-order-text-issue(type='text', placeholder='Пожалуйста опишите вашу проблему', name='big-text')
-                                p.warning-big-text-error#modal-order-text-issue-err
-                            input.prime__button.form__button-submit(type='submit' value="отправить")
+        include /src/components/modalOrder/index

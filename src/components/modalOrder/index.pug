@@ -1,0 +1,19 @@
+.modal-order#modal-order
+    .modal-order__wrapper
+        .modal-order__container#modal-order-container
+            img.modal-order__btn-close#modal-order-btn-close(src="/src/assets/icons/x-mark.svg" alt="x-mark")
+            form.modal-order__form#modal-order-form
+                h2.modal-order__title Оставьте заявку
+                .modal-order__input-wrap
+                    input.modal-order__input#modal-order-input-name(type="text" placeholder="Ваше имя" name="name")
+                    p.modal-order__input-error-label#modal-order-input-name-err
+                .modal-order__input-wrap
+                    input.modal-order__input#modal-order-input-email(type="text" placeholder="Email" name="email")
+                    p.modal-order__input-error-label#modal-order-input-email-err
+                .modal-order__input-wrap
+                    textarea.modal-order__input.modal-order__input_multiline#modal-order-text-issue(placeholder="Пожалуйста опишите вашу проблему" name="issue")
+                    p.modal-order__input-error-label#modal-order-text-issue-err
+                button.btn-default.modal-order__btn-submit#modal-order-btn-submit(type="submit")
+                    | Отправить
+            .modal-order__success-label.d-flex.justify-content-center.text-center#modal-order-label-success
+                p Ваша заявка успешно отправлена

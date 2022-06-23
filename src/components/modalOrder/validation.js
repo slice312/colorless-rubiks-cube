@@ -2,7 +2,8 @@ const Rule = Object.freeze({
     required: (value) => !value ? "поля обязательно*" : "",
 });
 
-const fields = {
+
+const fields = Object.freeze({
     name: {
         elements: {
             input: document.getElementById("modal-order-input-name"),
@@ -27,7 +28,9 @@ const fields = {
         rules: [Rule.required],
         errorText: ""
     }
-};
+});
+
+
 
 const validateField = (fieldName) => {
     fields[fieldName].errorText = getErrorText(fieldName);
@@ -53,13 +56,12 @@ const renderError = (fieldName) => {
     const {errorText} = fields[fieldName];
 
     if (errorText)
-        input.classList.add("input-field-error");
+        input.classList.add("modal-order__input_error");
     else
-        input.classList.remove("input-field-error");
+        input.classList.remove("modal-order__input_error");
 
     status.textContent = errorText;
 };
-
 
 const clearError = (fieldName) => {
     fields[fieldName].errorText = "";
@@ -67,24 +69,21 @@ const clearError = (fieldName) => {
 };
 
 
-
-
 export const Validator = {
-    validate: () => {
+    validateAll: () => {
         Object.keys(fields).forEach(field => validateField(field));
         return Object.values(fields).every(field => !field.errorText);
     },
+
     clearErrorsAll: () => {
         Object.keys(fields).forEach(fieldName => clearError(fieldName));
     },
+
     setClearErrorsHandlers: () => {
         Object.keys(fields)
             .forEach(fieldName => {
-                const hndl = () => {
-                    clearError(fieldName);
-                };
                 fields[fieldName].elements.input
-                    .addEventListener("input", hndl);
+                    .addEventListener("input", () => clearError(fieldName));
             });
     },
 };
