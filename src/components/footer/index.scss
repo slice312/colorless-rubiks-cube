@@ -1,0 +1,30 @@
+.footer {
+    background-color: #3F4750;
+    padding: 23px 0;
+
+    &__copyrights {
+        @include font-face(Lato, 400, 14px, 17px, #9FA7B0);
+        letter-spacing: 0.03em;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .footer {
+        &__wrap {
+            flex-direction: column-reverse;
+            gap: 22px;
+        }
+
+        &__links {
+            justify-content: center !important;
+            text-align: center;
+        }
+
+        &__copyrights-wrap {
+            padding: 0 !important;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}

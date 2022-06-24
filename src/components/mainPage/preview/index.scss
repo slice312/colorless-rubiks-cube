@@ -4,6 +4,7 @@
 
     &__body {
         position: relative;
+        padding-left: 80px;
     }
 
     &__title {
@@ -25,6 +26,7 @@
     }
 
     &__btn {
+        margin-top: 10px;
         @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
         text-transform: uppercase;
         text-align: center;
@@ -58,13 +60,12 @@
 }
 
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
 
 
 }
 
-@media (min-width: 768px) {
-
+@media (max-width: 768px) {
     .preview:before {
         background-image: url("/src/assets/images/about-lines-md.svg");
         background-position: 46% 25px;
@@ -74,6 +75,20 @@
     .preview {
         &__title {
             margin-bottom: 0;
+            @include font-face(Montserrat, 700, 28px, 34px, $color-text-primary-1);
+            text-transform: uppercase;
+            & span {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+
+        &__sub-title {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        &__btn {
         }
     }
 }
