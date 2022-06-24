@@ -56,3 +56,24 @@
     background-image: url("/src/assets/icons/two-polygons.svg");
     transform: translateY(-50%) translateX(-12%);
 }
+
+
+@media (min-width: 992px) {
+
+
+}
+
+@media (min-width: 768px) {
+
+    .preview:before {
+        background-image: url("/src/assets/images/about-lines-md.svg");
+        background-position: 46% 25px;
+        background-size: 56% 90%;
+    }
+
+    .preview {
+        &__title {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 section.questions
-    .questions__wrap.d-flex.row.col-10
-        each questionText in gMainQuestions
-            .questions__item.d-flex
-                img.questions__item-img(src="/src/assets/icons/cube.svg" alt="cube")
-                p.questions__item-text #{questionText}
+    .container
+        .questions__wrap.d-flex.row.col-10
+            each questionText in gMainQuestions
+                .questions__item.d-flex
+                    img.questions__item-img(src="/src/assets/icons/cube.svg" alt="cube")
+                    p.questions__item-text #{questionText}

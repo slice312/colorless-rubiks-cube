@@ -1,8 +1,11 @@
-section.services
-    h1.services__title Услуги
-    .services__items
-        each serv in gServices
-            .services__item
-                a(href=serv.url)
-                    img.services__img(src=serv.img alt="service-icon")
-                    p.services__item-text #{serv.text}
+section.main-services
+    .container
+        .main-services-wrap
+            .main-services__title-wrap.ps-sm-5
+                h2.main-services__title Услуги
+            ul.main-services__list
+                each serv in gServices
+                    li.main-services__item
+                        a.main-services__item-link(href=serv.url)
+                            img(src=serv.img alt="service-icon")
+                            p.main-services__item-text #{serv.text}

@@ -5,9 +5,11 @@
 @import "./buttons";
 
 
+// TODO: удалить
 @media (min-width: 1440px) {
     .my-container {
-        max-width: 82%;
+        //max-width: 82%;
+        //max-width: 1200px;
         margin: 0 auto;
     }
 }
