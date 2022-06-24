@@ -1,0 +1,51 @@
+extends /src/layout
+
+
+block content
+    section#services
+        .container
+            .breadcrumbs
+                a(href='./') Главная
+                p /
+                a(href='./services.html') Услуги
+                p /
+                p.active Разрабатываем маркетинг-план: дорожная карта достижения целей
+            .services__description
+                img.training__cube-img(src="/src/assets/icons/polygon.svg" alt="polygon")
+                img.training__bg-img(src="/src/assets/images/services-rubik.png" alt="services-rubik")
+                p.description-text.col-lg-10.col-12 Разрабатываем маркетинг-план: дорожная карта достижения целей
+                .description-plans.col-xl-8
+                    .plans-item
+                        img(src="/src/assets/icons/cube.svg" alt="cube")
+                        p Делаем прогноз развития рынка
+                    .plans-item
+                        img(src="/src/assets/icons/cube.svg" alt="cube")
+                        p Проводим сравнительный анализ стратегий конкурентов
+                    .plans-item
+                        img(src="/src/assets/icons/cube.svg" alt="cube")
+                        p Определяем точки роста
+                    .plans-item
+                        img(src="/src/assets/icons/cube.svg" alt="cube")
+                        p Ставим объективные цели
+                    .plans-item
+                        img(src="/src/assets/icons/cube.svg" alt="cube")
+                        p Разрабатываем план и модель контроля его выполнения
+                .services__second-block
+                    p.programs-text Описание услуги
+                    P.services-descr
+                        | Любая компания ставит себе цель непрерывного развития, которая отражается в итоговом плане действий по ее достижению. Основным измерением достижения цели является рост прибыли по результатам планируемого периода. Понимание траектории развития рынка, положения и стратегий его основных участников, позволяет правильно оценить свои возможности и поставить объективно достижимые цели.
+                        br
+                        br
+                        | Конкретный план действий по достижению целей разрабатывается на основе потребительских трендов и прогноза действий конкурентов.
+                        br
+                        br
+                        | Математическая модель контроля позволяет на основе сравнения плановых и фактических измеряемых величин контролировать ситуацию и своевременно предпринимать необходимые действия.
+                        br
+                        br
+                        | Основные этапы разработки
+                        span маркетинг-плана:
+                    .programs-item
+                        ul.services-ul
+                            each title in gServicesPage
+                                li.services-li= title
+            include /src/components/services-page/consultation/index
