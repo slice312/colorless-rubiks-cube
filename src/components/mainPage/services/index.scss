@@ -98,8 +98,7 @@
         padding-bottom: 42px;
 
         &__title-wrap::before {
-            background-image: url("/src/assets/images/spermatazoid-md.svg");
-            transform: translateY(-38%);
+            display: none;
         }
 
         &__list {
@@ -109,7 +108,7 @@
         }
 
         &__item {
-            padding: 47px 50px;
+            padding: 25px 25px;
             width: 48%;
 
             &:nth-child(2) .main-services__item-link {

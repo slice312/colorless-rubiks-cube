@@ -40,30 +40,34 @@
 }
 
 
-@media (max-width:768px) {
+@media (max-width:800px) {
     .questions {
-        flex-direction: column;
-        align-content: center;
-
         &__item {
-            width: 80%;
-        }
-
-        &__iten-img {
-            margin-right: 14px;
+            width: 100% !important;
         }
 
         &__item-text {
             font-size: 24px;
         }
+        &__iten-img {
+            margin-right: 30px;
+        }
+
     }
 }
 
 
 @media (max-width:576px) {
     .questions {
+        display: flex;
+        justify-content: center;
+
         &__item {
             width: 90%;
+        }
+
+        &__item-img {
+            margin-right: 25px !important;
         }
 
         &__item-text {
