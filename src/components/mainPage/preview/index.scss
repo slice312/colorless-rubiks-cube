@@ -26,12 +26,18 @@
     }
 
     &__btn {
+        width: 264px;
+        height: 48px;
         margin-top: 10px;
         @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
         text-transform: uppercase;
         text-align: center;
-        padding: 15px 32px 13px;
+        padding: 0;
     }
+    .svg-priv {
+        display: none;
+    }
+
 }
 
 .preview:before {
@@ -42,9 +48,10 @@
     width: 100%;
     height: 100%;
     background-image: url("/src/assets/images/about-lines.svg");
-    background-position: 45% 88px;
+    background-position: 50% 30px;
     background-repeat: no-repeat;
-    background-size: 55% 88%;
+    background-size: 40% 100%;
+
 }
 
 .preview__title:before {
@@ -60,18 +67,59 @@
 }
 
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
+    .preview {
+        &__body {
+            position: relative;
+            padding-left: 0px;
+        }
+        &__title {
+            position: relative;
+            @include font-face(Montserrat, 700, 34px, 34px, $color-text-primary-1);
+            text-transform: uppercase;
 
+            span {
+                @include font-face(Montserrat, 700, 18px, 22px, $color-text-primary-1);
+            }
+        }
+
+        &__sub-title {
+            @include font-face(Lato, 400, 14px, 17px, $color-text-primary-1);
+        }
+
+        &__img {
+            width: 41%;
+        }
+
+        &__btn {
+            width: 264px;
+            height: 48px;
+            margin-top: 10px;
+            @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
+            text-transform: uppercase;
+            text-align: center;
+            padding: 0;
+        }
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: calc(-1 * var(--bs-gutter-y));
+            /* margin-right: calc(-.5 * var(--bs-gutter-x)); */
+            /* margin-left: calc(-.5 * var(--bs-gutter-x)); */
+            padding: 0;
+        }
+    }
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .preview:before {
         background-image: url("/src/assets/images/about-lines-md.svg");
         background-position: 46% 25px;
         background-size: 56% 90%;
     }
-
     .preview {
         &__title {
             margin-bottom: 0;
@@ -90,5 +138,86 @@
 
         &__btn {
         }
+    }
+    .preview:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/src/assets/images/about-lines.svg");
+        background-position: 45% 25px;
+        background-repeat: no-repeat;
+        background-size: 55% 100% !important;
+    }
+
+    .preview__title:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 140px;
+        height: 155px;
+        background-image: url("/src/assets/icons/two-polygons.svg");
+        transform: translateY(-50%) translateX(-12%);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .preview {
+        position: relative;
+        padding: 100px 0 140px;
+
+        &__body {
+            position: relative;
+            padding-left: 80px;
+            text-align: center;
+
+        }
+        &__title {
+            padding: 0;
+            position: relative;
+            @include font-face(Montserrat, 700, 28px, 34px, $color-text-primary-1);
+            text-transform: uppercase;
+
+            span {
+                @include font-face(Montserrat, 700, 18px, 22px, $color-text-primary-1);
+            }
+        }
+
+        &__sub-title {
+            margin: auto;
+            max-width: 300px;
+            @include font-face(Lato, 400, 14px, 17px, $color-text-primary-1);
+        }
+
+        &__img {
+            width: 41%;
+        }
+
+        &__btn {
+            margin: auto;
+            width: 264px;
+            height: 48px;
+            margin-top: 10px;
+            @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
+            text-transform: uppercase;
+            text-align: center;
+            padding: 0;
+        }
+        .svg-priv {
+                 display: block;
+            margin-top: 45px;
+             }
+    }
+
+    .preview:before {
+        display: none;
+    }
+
+    .preview__title:before {
+        display: none;
     }
 }
