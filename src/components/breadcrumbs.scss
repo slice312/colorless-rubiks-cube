@@ -1,0 +1,29 @@
+.breadcrumbs {
+    position: relative;
+    z-index: 4;
+    margin: auto;
+    max-width: 1200px;
+    padding: 70px 15px 35px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+
+    a, p {
+        @include font-face(Roboto, 400, 14px, 16px, #9FA7B0);
+    }
+
+    .active {
+        @include font-face(Roboto, 400, 14px, 16px, $color-text-primary-1);
+    }
+}
+
+@media (max-width: 576px) {
+    .breadcrumbs {
+        padding: 40px  26px;
+
+        a, p, .active {
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+}

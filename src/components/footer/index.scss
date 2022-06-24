@@ -6,6 +6,11 @@
         @include font-face(Lato, 400, 14px, 17px, #9FA7B0);
         letter-spacing: 0.03em;
     }
+
+    &__link-item:hover * {
+        transition: 0.2s;
+        fill: green;
+    }
 }
 
 

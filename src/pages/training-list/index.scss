@@ -1,0 +1,129 @@
+.training-list {
+    &__items {
+        position: relative;
+        justify-content: center;
+        padding-bottom: 55px;
+    }
+
+    &__cube-img {
+        position: absolute;
+        top: -30px;
+        left: 40px;
+        z-index: 1;
+    }
+
+    &__bg-img {
+        position: absolute;
+        top: -80px;
+        right: 0;
+        z-index: 1;
+    }
+
+    &__item {
+        position: relative;
+        margin: auto auto 40px;
+        z-index: 3;
+        max-width: 1173px;
+        height: auto;
+        padding: 39px 0 39px 26px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(40, 44, 55, 0.2);
+        border-radius: 20px;
+
+        .col-md-6 {
+            flex: 0 0 auto;
+            width: 48.5%;
+        }
+    }
+
+    &__item-title {
+        margin-bottom: 30px;
+        max-width: 503px;
+        @include font-face(Montserrat, 700, 30px, 37px, $color-text-primary-1);
+    }
+
+    &__item-desc {
+        margin-bottom: 5px;
+        @include font-face(Lato, 400, 18px, 22px, $color-text-primary-1);
+    }
+
+    &__item-btn {
+        margin-top: 30px;
+        width: 229px;
+        height: 48px;
+        background: #287EE7;
+        border-radius: 8px;
+        @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
+        text-transform: uppercase;
+        padding: 0 20px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item-plan {
+        display: flex;
+        gap: 41px;
+        margin-top: 14px;
+        align-items: flex-start;
+
+        p {
+            margin: 0;
+            @include font-face(Lato, 400, 17px, 20px, $color-text-primary-1);
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .training-list {
+        &__cube-img,
+        &__bg-img {
+            display: none;
+        }
+
+        &__item {
+            padding: 20px 8px 20px;
+
+            .col-md-6 {
+                flex: 0 0 auto;
+                width: 48.5%;
+            }
+
+            .col-12 {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }
+
+        &__item-btn {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .training-list {
+        &__item-title {
+            font-size: 25px;
+            line-height: 27px;
+            margin-bottom: 15px;
+        }
+
+        &__item_desc {
+            font-size: 15px;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+
+        &__item-btn {
+            margin-top: 10px;
+        }
+
+        &__item-plan {
+            gap: 20px;
+        }
+    }
+}
