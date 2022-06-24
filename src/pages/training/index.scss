@@ -1,0 +1,332 @@
+.training {
+    background: #FFFFFF;
+    
+    .training__description {
+        margin-top: 10px;
+        margin-bottom: 130px;
+        position: relative;
+        .training__bg-img {
+            position: absolute;
+            top: -80px;
+            right: 0;
+            z-index: 1;
+        }
+
+        .training__cube-img {
+            position: absolute;
+            top: -30px;
+            left: 40px;
+            z-index: 1;
+        }
+
+        .training__line-img {
+            position: absolute;
+            bottom: -4%;
+            right: 10.5%;
+            z-index: 1;
+        }
+        .training__bg-cube {
+            position: absolute;
+            bottom: 730px;
+            right: 0;
+            z-index: 1;
+        }
+        .description-text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 54px;
+            color: #282C37;
+            margin: 0 0 20px 60px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .description-descr {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #282C37;
+            margin: 0 0 5px 60px;
+        }
+
+        .description-descrs {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #282C37;
+            margin: 0 0 30px 60px;
+        }
+
+        .description-plans {
+            margin: 0 0 40px 105px;
+
+            .plans-item {
+                gap: 41px;
+                display: flex;
+                align-items: flex-start;
+
+                img {
+                    width: 23px;
+                    height: 25px;
+                }
+
+                p {
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 17px;
+                    line-height: 20px;
+                    color: #282C37;
+                }
+            }
+        }
+
+        .description-button {
+            width: 287px;
+            height: 48px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background: #47CF34;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: none;
+            margin-left: 105px;
+
+            &:hover {
+                background: #1eff00;
+            }
+
+            .description-span {
+                position: absolute;
+                right: 25px;
+            }
+        }
+    }
+
+    .training__programs {
+        margin: 165px 0 0 62px;
+
+        .programs-text {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            color: #282C37;
+            margin-bottom: 45px;
+        }
+
+        .programs-item {
+            margin-bottom: 42px;
+
+            .programs-title {
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                color: #282C37;
+                margin-bottom: 20px;
+            }
+
+            .programs-process {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 20px;
+                color: #282C37;
+                padding-top: 5px;
+                margin: 0 0 20px 42px;
+
+            }
+
+            .programs-ul {
+                margin-left: 38px;
+
+                .programs-li {
+                    @include font-face(Lato, 400, 17px, 20px, $color-text-primary-1);
+                    margin-bottom: 10px;
+                    max-width: 1115px;
+                    position: relative;
+                    z-index: 3;
+                    list-style-type: disc;
+
+
+                    &::marker {
+                        font-size: 35px;
+                        color: #A5CBF9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .training {
+        padding-top: 20px;
+
+        .breadcrumbs {
+            display: none;
+        }
+
+        .training__description {
+            margin-top: 10px;
+            margin-bottom: 95px !important;
+
+            .description-text {
+                font-size: 26px !important;
+                line-height: 30px !important;
+            }
+
+            .description-descr {
+                font-size: 16px !important;
+                line-height: 20px !important;
+            }
+
+            .description-descrs {
+                font-size: 16px !important;
+                line-height: 20px !important;
+            }
+
+            .description-plans {
+                margin: 0 0 40px 0 !important;
+                .plans-item {
+                    gap: 20px;
+                }
+            }
+
+            .description-button {
+                margin-left: 0 !important;
+
+            }
+        }
+
+        .training__programs {
+            margin: 80px 0 0 0 !important;
+
+            .programs-text {
+                font-size: 26px;
+                line-height: 30px;
+                margin-bottom: 30px !important;
+            }
+
+            .programs-item {
+                margin-bottom: 42px;
+
+                .programs-process {
+                    margin: 0 0 20px 15px !important;
+                }
+
+                .programs-ul {
+                    margin-left: 0 !important;
+
+                    .programs-li::marker {
+                        font-size: 35px;
+                        color: #A5CBF9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .training__cube-img,
+    .training__bg-img,
+    .training__bg-cube,
+    .training__line-img {
+        display: none ;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .training {
+        .training__description {
+            .training__cube-img {
+                position: absolute;
+                top: -40px;
+                left: -40px;
+                z-index: 1;
+            }
+
+            .description-text {
+                font-size: 35px;
+                line-height: 40px;
+                margin: 0 0 20px 0;
+            }
+
+            .description-descr {
+                margin: 0 0 5px 0;
+            }
+
+            .description-descrs {
+                margin: 0 0 30px 0;
+            }
+
+            .description-plans {
+                margin: 0 0 40px 50px;
+
+            }
+
+            .description-button {
+                margin-left: 50px;
+            }
+        }
+
+        .training__programs {
+            margin: 165px 0 0 0;
+
+            .programs-text {
+                margin-bottom: 45px;
+            }
+
+            .programs-item {
+                margin-bottom: 42px;
+
+                .programs-title {
+                    margin-bottom: 20px;
+                }
+
+                .programs-process {
+                    margin: 0 0 20px 42px;
+
+                }
+
+                .programs-ul {
+                    margin-left: 38px;
+
+                    .programs-li {
+                        margin-bottom: 10px;
+                        max-width: 1115px;
+                    }
+
+                    .programs-li::marker {
+                        font-size: 35px;
+                        color: #A5CBF9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 1399.98px) {}
