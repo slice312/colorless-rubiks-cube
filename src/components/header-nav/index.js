@@ -1,8 +1,15 @@
-export const renderHeaderNav = () => {
-    const burgerMenu = document.getElementById("burger-menu");
-    const burgerBtnOpen = document.getElementById("burger-btn-open");
-    const burgerBtnClose = document.getElementById("burger-btn-close");
+const toggleMenu = () => {
+    const menu = document.querySelector(".mobail-menu");
+    const burgerBtn = document.querySelector('.burger');
 
-    burgerBtnOpen.onclick = () => burgerMenu.classList.toggle("burger-menu_active");
-    burgerBtnClose.onclick = () => burgerMenu.classList.toggle("burger-menu_active");
+    burgerBtn.classList.toggle("active");
+    menu.classList.toggle("mobail-menu--active");
 }
+
+export const renderHeaderNav = () => {
+    const burgerBtn = document.getElementById("burger-btn");
+    const closeBtn = document.getElementById("burger-close-btn");
+    burgerBtn.onclick = toggleMenu;
+    closeBtn.onclick = toggleMenu;
+};
+
