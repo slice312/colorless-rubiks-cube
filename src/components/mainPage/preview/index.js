@@ -1,4 +1,4 @@
-import {ModalOrder} from "/src/components/modalOrder";
+import {ModalOrder} from "/src/components/modal-order";
 
 
 export const renderPreview = () => {

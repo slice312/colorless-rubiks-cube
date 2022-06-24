@@ -1,7 +1,7 @@
 import "./styles/index.scss";
 import {renderHeaderNav} from "./components/header-nav";
 import {renderPreview} from "/src/components/mainPage/preview";
-import {ModalOrder} from "./components/modalOrder";
+import {ModalOrder} from "./components/modal-order";
 
 
 export const render = () => {
@@ -14,7 +14,6 @@ export const render = () => {
             window.location.href = "./training.html";
         }
     }
-
 
     ModalOrder.render();
 };
