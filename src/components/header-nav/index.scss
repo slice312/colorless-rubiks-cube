@@ -2,6 +2,10 @@
     width: 100%;
     box-shadow: (0px 2px 8px rgba(50, 59, 80, 0.05));
 
+    &-navbar{
+        gap: 76px
+    }
+
     .container-menu {
         margin: auto;
         max-width: 1200px;
@@ -17,6 +21,9 @@
         justify-content: center;
     }
 
+    .menu__link_active {
+        font-weight: 700;
+    }
     .menu,
     .mobail-menu__inner {
         a {
@@ -34,32 +41,27 @@
             margin-right: 80px;
         }
 
-        .menu__link_active {
-            font-weight: 700;
+
+    }
+
+    .social-media {
+        align-items: center;
+        gap: 24px;
+
+        a svg path {
+            transition: 0.2s;
         }
 
-        .social-media {
-            width: 120px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-left: 95px;
+        .facebook:hover path {
+            fill: #287EE7;
+        }
 
-            a svg path {
-                transition: 0.2s;
-            }
+        .telegram:hover path {
+            fill: #287EE7;
+        }
 
-            .facebook:hover path {
-                fill: #287EE7;
-            }
-
-            .telegram:hover path {
-                fill: #287EE7;
-            }
-
-            .whatsapp:hover path {
-                fill: #47CF34;
-            }
+        .whatsapp:hover path {
+            fill: #47CF34;
         }
     }
 
@@ -166,7 +168,7 @@
         }
     }
 
-    .mobail-menu--active {
+    .mobail-menu__active {
         transform: translateX(0px);
         transition-duration: all ease-in-out 10px;
     }
@@ -186,13 +188,19 @@
             padding: 17px 0 22px 0;
         }
 
-        .menu {
+        &-navbar,
+        .social-media {
             display: none !important;
         }
 
         .burger,
-        .mobail-menu {
+        .mobail-menu{
             display: block !important;
+        }
+
+        .mobail-menu .social-media{
+            display: flex !important;
+            justify-content: space-between !important;
         }
 
         .menu__link {
