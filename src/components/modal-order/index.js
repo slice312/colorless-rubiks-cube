@@ -1,4 +1,4 @@
-import {Validator} from "./validation";
+import {ModalOrderValidator} from "./validation";
 
 
 const form = document.getElementById("modal-order-form");
@@ -22,7 +22,7 @@ const closeModal = () => {
 
 const resetState = () => {
     form.reset();
-    Validator.clearErrorsAll();
+    ModalOrderValidator.clearErrorsAll();
 
     labelSuccess.style.visibility = "hidden";
     btnSubmit.innerText = "Отправить";
@@ -31,12 +31,12 @@ const resetState = () => {
 
 const onFormSubmit = (e) => {
     e.preventDefault(); // прервать перезагрузку страницы
-    Validator.clearErrorsAll();
+    ModalOrderValidator.clearErrorsAll();
 
     // таймаут для анимации мигания перед валидацией
     setTimeout(async () => {
-        const isValid = Validator.validateAll();
-        Validator.setClearErrorsHandlers();
+        const isValid = ModalOrderValidator.validateAll();
+        ModalOrderValidator.setClearErrorsHandlers();
 
         if (isValid) {
             btnSubmit.innerText = "Идет отправка...";

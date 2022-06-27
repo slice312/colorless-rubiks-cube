@@ -17,3 +17,23 @@
         background-color: gray;
     }
 }
+
+.btn-secondary {
+    @include font-face(Montserrat, 400, 14px, 14px, $color-text-primary-2);
+    background: #287EE7;
+    border-radius: 8px;
+
+    &:hover {
+        transition: 0.2s;
+        background-color: #4B9AFB;
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:disabled {
+        pointer-events: none;
+        background-color: gray;
+    }
+}

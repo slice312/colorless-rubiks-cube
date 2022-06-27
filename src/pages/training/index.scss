@@ -44,22 +44,12 @@
         }
 
         .description-descr {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 22px;
-            color: #282C37;
+            @include font-face(Lato, 400, 18px, 22px, $color-text-primary-1);
             margin: 0 0 5px 60px;
         }
 
         .description-descrs {
-            font-family: 'Lato';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 22px;
-            color: #282C37;
+            @include font-face(Lato, 400, 18px, 22px, $color-text-primary-1);
             margin: 0 0 30px 60px;
         }
 
@@ -77,12 +67,7 @@
                 }
 
                 p {
-                    font-family: 'Lato';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 17px;
-                    line-height: 20px;
-                    color: #282C37;
+                    @include font-face(Lato, 400, 17px, 20px, $color-text-primary-1);
                 }
             }
         }
@@ -90,13 +75,8 @@
         .description-button {
             width: 287px;
             height: 48px;
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 20px;
+            @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
             text-transform: uppercase;
-            color: #FFFFFF;
             background: #47CF34;
             border-radius: 8px;
             display: flex;
@@ -121,12 +101,7 @@
         margin: 165px 0 0 62px;
 
         .programs-text {
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 30px;
-            line-height: 37px;
-            color: #282C37;
+            @include font-face(Montserrat, 700, 30px, 37px, $color-text-primary-1);
             margin-bottom: 45px;
         }
 
@@ -134,22 +109,12 @@
             margin-bottom: 42px;
 
             .programs-title {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 24px;
-                color: #282C37;
+                @include font-face(Montserrat, 700, 20px, 24px, $color-text-primary-1);
                 margin-bottom: 20px;
             }
 
             .programs-process {
-                font-family: 'Lato';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 17px;
-                line-height: 20px;
-                color: #282C37;
+                @include font-face(Lato, 400, 17px, 20px, $color-text-primary-1);
                 padding-top: 5px;
                 margin: 0 0 20px 42px;
 
@@ -177,7 +142,7 @@
     }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
     .training {
         padding-top: 20px;
 
@@ -246,7 +211,7 @@
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
 
     .training__cube-img,
     .training__bg-img,
@@ -256,7 +221,7 @@
     }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     .training {
         .training__description {
             .training__cube-img {
@@ -326,7 +291,3 @@
         }
     }
 }
-
-@media (max-width: 1199.98px) {}
-
-@media (max-width: 1399.98px) {}

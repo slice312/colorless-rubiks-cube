@@ -53,12 +53,8 @@
             padding-left: 21px;
 
             &::placeholder {
-                font-family: 'Lato';
+                @include font-face(Lato, 400, 18px, 22px, #9FA7B0);
                 font-style: italic;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 22px;
-                color: #9FA7B0;
             }
         }
 
@@ -69,14 +65,9 @@
             border-radius: 8px;
             border: none;
 
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 20px;
             text-align: center;
+            @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
             text-transform: uppercase;
-            color: #FFFFFF;
 
             &:hover {
                 background: #30B01E;

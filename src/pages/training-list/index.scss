@@ -51,8 +51,6 @@
         margin-top: 30px;
         width: 229px;
         height: 48px;
-        background: #287EE7;
-        border-radius: 8px;
         @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
         text-transform: uppercase;
         padding: 0 20px;
@@ -104,7 +102,7 @@
 }
 
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
     .training-list {
         &__item-title {
             font-size: 25px;
