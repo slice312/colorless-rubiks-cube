@@ -6,12 +6,12 @@
         flex-direction: row;
         justify-content: space-between;
         padding-top: 94px;
-        padding-bottom: 234px;
+        padding-bottom: 145px;
         background: url("/src/assets/images/bg-line-1.png") no-repeat 32% 15%;
     }
 
     &__info {
-        margin-left: 30px;
+        margin-left: 60px;
         padding-left: 30px;
         padding-top: 105px;
         background: url("/src/assets/images/bg-polygons.png") no-repeat;
@@ -42,7 +42,7 @@
     }
 
     &__img {
-        margin-right: 50px;
+        margin-right: 20px;
     }
 }
 
@@ -111,16 +111,16 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .preview {
-        background: url("/src/assets/icons/arrows-down.svg") no-repeat 50% 90%;
+        background: url("/src/assets/icons/arrows-down.svg") no-repeat 50% 95%;
 
         &__bg {
             background: none;
             flex-direction: column-reverse;
             align-items: center;
-            padding-top: 45px;
-            padding-bottom: 180px;
+            padding-top: 70px;
+            padding-bottom: 150px;
         }
 
         &__info {
@@ -186,6 +186,12 @@
 
 @media(max-width: 350px) {
     .preview {
+        background: none;
+
+        &__bg {
+            padding-bottom: 40px;
+        }
+
         &__info {
             &-title {
                 font-size: 25px;
