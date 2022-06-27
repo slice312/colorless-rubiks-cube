@@ -1,10 +1,10 @@
 const toggleMenu = () => {
-    const menu = document.querySelector(".mobail-menu");
+    const menu = document.getElementById("mobile-menu");
     const burgerBtn = document.querySelector('.burger');
 
     burgerBtn.classList.toggle("active");
-    menu.classList.toggle("mobail-menu--active");
-}
+    menu.classList.toggle("mobile-menu__active");
+};
 
 export const renderHeaderNav = () => {
     const burgerBtn = document.getElementById("burger-btn");
@@ -15,18 +15,8 @@ export const renderHeaderNav = () => {
 };
 
 
-
 const setActiveNavLink = () => {
-    const {pathname} = new URL(window.location.href);
-
-    let activeLink = null;
-    if (pathname === "/")
-        activeLink = document.getElementById("nav-link-consultation");
-    else if (pathname === "/services.html")
-        activeLink = document.getElementById("nav-link-services");
-    else if (pathname === "/training-list.html")
-        activeLink = document.getElementById("nav-link-training-list");
-
-
-    activeLink?.classList.add("menu__link_active");
+    Array.from(document.querySelectorAll(".menu__link"))
+        .filter(x => x.href === window.location.href)
+        .forEach(x => x.classList.add("menu__link_active"));
 };
