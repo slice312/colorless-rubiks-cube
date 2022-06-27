@@ -82,7 +82,7 @@
     }
 
     &__item-text {
-        width: 60%;
+        width: 63%;
         @include font-face(Lato, 600, 18px, 21.6px, #FFFFFF);
     }
 }
@@ -92,15 +92,8 @@
 }
 
 
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .main-services {
-        padding-bottom: 42px;
-
-        &__title-wrap::before {
-            display: none;
-        }
-
         &__list {
             display: flex;
             flex-wrap: wrap;
@@ -118,6 +111,17 @@
 
         &__item-text {
             width: 100%;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .main-services {
+        padding-bottom: 42px;
+
+        &__title-wrap::before {
+            display: none;
         }
     }
 }

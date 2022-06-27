@@ -1,223 +1,210 @@
 .preview {
-    position: relative;
-    padding: 100px 0 140px;
+    background: url("/src/assets/images/bg-line-2.png") no-repeat 37.8% 84%;
 
-    &__body {
-        position: relative;
-        padding-left: 80px;
+    &__bg {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 94px;
+        padding-bottom: 234px;
+        background: url("/src/assets/images/bg-line-1.png") no-repeat 32% 15%;
     }
 
-    &__title {
-        position: relative;
-        @include font-face(Montserrat, 700, 44px, 54px, $color-text-primary-1);
-        text-transform: uppercase;
+    &__info {
+        margin-left: 30px;
+        padding-left: 30px;
+        padding-top: 105px;
+        background: url("/src/assets/images/bg-polygons.png") no-repeat;
 
-        span {
-            @include font-face(Montserrat, 700, 30px, 37px, $color-text-primary-1);
+        &-title {
+            @include font-face(Montserrat, 700, 44px, 54px, $color-text-primary-1);
+            text-transform: uppercase;
         }
-    }
 
-    &__sub-title {
-        @include font-face(Lato, 400, 22px, 26px, $color-text-primary-1);
+        &-sub-title {
+            @include font-face(Montserrat, 700, 30px, 37px, $color-text-primary-1);
+            text-transform: uppercase;
+        }
+
+        &-desc {
+            margin-top: 19px;
+            @include font-face(Lato, 400, 22px, 26px, $color-text-primary-1);
+        }
+
+        &-btn {
+            margin-top: 52px;
+            width: 264px;
+            height: 48px;
+            @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
+            text-align: center;
+            text-transform: uppercase;
+        }
     }
 
     &__img {
-        width: 41%;
+        margin-right: 50px;
     }
-
-    &__btn {
-        width: 264px;
-        height: 48px;
-        margin-top: 10px;
-        @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
-        text-transform: uppercase;
-        text-align: center;
-        padding: 0;
-    }
-    .svg-priv {
-        display: none;
-    }
-
-}
-
-.preview:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/src/assets/images/about-lines.svg");
-    background-position: 50% 30px;
-    background-repeat: no-repeat;
-    background-size: 40% 100%;
-
-}
-
-.preview__title:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 140px;
-    height: 155px;
-    background-image: url("/src/assets/icons/two-polygons.svg");
-    transform: translateY(-50%) translateX(-12%);
 }
 
 
-@media (max-width: 991.98px) {
+@media (max-width: 1200px) {
     .preview {
-        &__body {
-            position: relative;
-            padding-left: 0px;
-        }
-        &__title {
-            position: relative;
-            @include font-face(Montserrat, 700, 34px, 34px, $color-text-primary-1);
-            text-transform: uppercase;
+        background-position: 50% 90%;
 
-            span {
-                @include font-face(Montserrat, 700, 18px, 22px, $color-text-primary-1);
+        &__info {
+            margin-left: 0;
+
+            &-title {
+                font-size: 40px;
+            }
+
+            &-sub-title {
+                font-size: 26px;
+            }
+
+            &-desc {
+                font-size: 20px;
+            }
+
+            &-btn {
+                margin-top: 52px;
             }
         }
 
-        &__sub-title {
-            @include font-face(Lato, 400, 14px, 17px, $color-text-primary-1);
+        &__img {
+            margin-right: 0;
+            img {
+                width: 420px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 993px) {
+    .preview {
+        background-size: 480px;
+        background-position: 50% 90%;
+
+        &__bg {
+            background-size: 480px;
+            background-position: 56% 18%;
+        }
+
+        &__info {
+            &-title {
+                font-size: 30px;
+                line-height: 35px;
+            }
+
+            &-sub-title {
+                font-size: 22px;
+                line-height: 38px;
+            }
+        }
+
+        &__img img {
+            margin: 45px 0 0 0;
+            width: 320px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .preview {
+        background: url("/src/assets/icons/arrows-down.svg") no-repeat 50% 90%;
+
+        &__bg {
+            background: none;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding-top: 45px;
+            padding-bottom: 180px;
+        }
+
+        &__info {
+            margin-top: 25px;
+            width: auto !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            text-align: center;
+            background: none;
+
+            &-sub-title {
+                font-size: 21px;
+                line-height: 30px;
+            }
+
+            &-btn {
+                margin-top: 25px;
+            }
         }
 
         &__img {
-            width: 41%;
-        }
-
-        &__btn {
-            width: 264px;
-            height: 48px;
-            margin-top: 10px;
-            @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
-            text-transform: uppercase;
-            text-align: center;
-            padding: 0;
-        }
-        .row {
-            --bs-gutter-x: 1.5rem;
-            --bs-gutter-y: 0;
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: calc(-1 * var(--bs-gutter-y));
-            /* margin-right: calc(-.5 * var(--bs-gutter-x)); */
-            /* margin-left: calc(-.5 * var(--bs-gutter-x)); */
-            padding: 0;
+            margin-left: 20px;
+            img {
+                width: 370px;
+            }
         }
     }
-
 }
 
-@media (max-width: 800px) {
-    .preview:before {
-        background-image: url("/src/assets/images/about-lines-md.svg");
-        background-position: 46% 25px;
-        background-size: 56% 90%;
-    }
+
+@media(max-width: 576px) {
     .preview {
-        &__title {
-            margin-bottom: 0;
-            @include font-face(Montserrat, 700, 28px, 34px, $color-text-primary-1);
-            text-transform: uppercase;
-            & span {
+        &__info {
+            &-title {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            &-sub-title {
                 font-size: 18px;
                 line-height: 22px;
             }
-        }
 
-        &__sub-title {
-            font-size: 14px;
-            line-height: 17px;
-        }
+            &-desc {
+                margin-top: 16px;
+                font-size: 14px;
+                line-height: 16px;
+            }
 
-        &__btn {
-        }
-    }
-    .preview:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("/src/assets/images/about-lines.svg");
-        background-position: 45% 25px;
-        background-repeat: no-repeat;
-        background-size: 55% 100% !important;
-    }
-
-    .preview__title:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 140px;
-        height: 155px;
-        background-image: url("/src/assets/icons/two-polygons.svg");
-        transform: translateY(-50%) translateX(-12%);
-    }
-}
-
-@media (max-width: 767.98px) {
-    .preview {
-        position: relative;
-        padding: 100px 0 140px;
-
-        &__body {
-            position: relative;
-            padding-left: 80px;
-            text-align: center;
-
-        }
-        &__title {
-            padding: 0;
-            position: relative;
-            @include font-face(Montserrat, 700, 28px, 34px, $color-text-primary-1);
-            text-transform: uppercase;
-
-            span {
-                @include font-face(Montserrat, 700, 18px, 22px, $color-text-primary-1);
+            &-btn {
+                margin-top: 24px;
             }
         }
 
-        &__sub-title {
-            margin: auto;
-            max-width: 300px;
-            @include font-face(Lato, 400, 14px, 17px, $color-text-primary-1);
+        &__img img {
+            width: 300px;
         }
-
-        &__img {
-            width: 41%;
-        }
-
-        &__btn {
-            margin: auto;
-            width: 264px;
-            height: 48px;
-            margin-top: 10px;
-            @include font-face(Montserrat, 700, 16px, 20px, $color-text-primary-2);
-            text-transform: uppercase;
-            text-align: center;
-            padding: 0;
-        }
-        .svg-priv {
-                 display: block;
-            margin-top: 45px;
-             }
     }
+}
 
-    .preview:before {
-        display: none;
-    }
 
-    .preview__title:before {
-        display: none;
+@media(max-width: 350px) {
+    .preview {
+        &__info {
+            &-title {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            &-sub-title {
+                font-size: 16px;
+                line-height: 22px;
+            }
+
+            &-desc {
+                width: 90%;
+                text-align: center;
+            }
+        }
+
+        &__img img {
+            width: 250px;
+        }
     }
 }
