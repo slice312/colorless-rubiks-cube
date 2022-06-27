@@ -1,6 +1,6 @@
 import "./styles/index.scss";
 import {renderHeaderNav} from "./components/header-nav";
-import {renderPreview} from "/src/components/mainPage/preview";
+import {renderPreview} from "./components/main-page/preview";
 import {ModalOrder} from "./components/modal-order";
 
 
