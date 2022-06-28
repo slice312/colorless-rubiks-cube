@@ -20,7 +20,7 @@
         margin-top: 10px;
         margin-bottom: 130px;
         position: relative;
-        padding-left: 23px;
+        padding-left: 70px;
 
         .training__cube-img {
             position: absolute;
@@ -35,6 +35,7 @@
             right: 10.5%;
             z-index: 1;
         }
+
         .description-text {
             @include font-face(Montserrat, 700, 44px, 54px, $color-text-primary-1);
             margin: 0 0 20px 0px;
@@ -137,10 +138,21 @@
     }
 }
 
+
+@media (max-width: 1400px) {
+    .training {
+        .training__description {
+            padding-left: 23px;
+        }
+    }
+}
+
+
 @media (max-width: 992px) {
     .training {
         .training__description {
             padding-left: 0;
+
             .training__cube-img {
                 position: absolute;
                 top: -40px;
@@ -223,7 +235,7 @@
     .training__bg-img,
     .training__bg-cube,
     .training__line-img {
-        display: none ;
+        display: none;
     }
 
     .training {
@@ -265,6 +277,7 @@
 
             .description-plans {
                 margin: 0 0 40px 0 !important;
+
                 .plans-item {
                     gap: 20px;
                 }
