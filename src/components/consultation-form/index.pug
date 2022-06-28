@@ -1,0 +1,14 @@
+form.consultation-form#consultation-form
+    img.consultation-form__bg-img1(src="/src/assets/icons/polygon.svg" alt="polygon")
+    img.consultation-form__bg-img2(src="/src/assets/icons/polygon.svg" alt="polygon")
+    img.consultation-form__bg-img3(src="/src/assets/icons/polygon.svg" alt="polygon")
+    .consultation-form__wrap
+        .consultation-form__input-wrap
+            input.consultation-form__input#consultation-form-input-name(type="text" placeholder="Ваше имя" name="name")
+            p.consultation-form__input-error-label#consultation-form-input-name-err
+
+        .consultation-form__input-wrap
+            input.consultation-form__input#consultation-form-input-email(type="text" placeholder="Email" name="email")
+            p.consultation-form__input-error-label#consultation-form-input-email-err
+
+        button.btn-default.consultation-form__submit-btn#consultation-form-btn-submit(type="submit") Получить консультацию

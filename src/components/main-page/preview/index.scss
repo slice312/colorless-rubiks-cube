@@ -119,7 +119,7 @@
             background: none;
             flex-direction: column-reverse;
             align-items: center;
-            padding-top: 70px;
+            padding-top: 30px;
             padding-bottom: 150px;
         }
 
@@ -155,6 +155,9 @@
 
 @media(max-width: 576px) {
     .preview {
+        &__bg {
+            padding-top: 10px;
+        }
         &__info {
             &-title {
                 font-size: 28px;
