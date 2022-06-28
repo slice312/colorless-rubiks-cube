@@ -3,7 +3,7 @@
     z-index: 4;
     margin: auto;
     max-width: 1200px;
-    padding: 70px 15px 35px;
+    padding: 70px 27px 35px;
     display: flex;
     align-items: flex-start;
     gap: 16px;
@@ -17,9 +17,15 @@
     }
 }
 
+
+@media (max-width: 769px) {
+    .breadcrumbs {
+        padding: 20px 26px;
+    }
+}
+
 @media (max-width: 576px) {
     .breadcrumbs {
-        padding: 40px  26px;
 
         a, p, .active {
             font-size: 12px;

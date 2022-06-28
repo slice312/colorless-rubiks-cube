@@ -11,7 +11,7 @@
     &__items {
         position: relative;
         justify-content: center;
-        padding-bottom: 55px;
+        padding: 0 20px 55px 20px;
     }
 
     &__cube-img {
@@ -76,6 +76,28 @@
 }
 
 
+@media (max-width: 1200px) {
+    .training-list {
+        &__item-title {
+            font-size: 25px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .training-list {
+        &__items {
+            //padding: 0 0px 55px 0px;
+        }
+        &__item-title {
+            font-size: 21px;
+            line-height: 30px;
+            margin-bottom: 22px;
+        }
+    }
+}
+
+
 @media (max-width: 768px) {
     .training-list {
         &__cube-img,
@@ -98,6 +120,8 @@
         }
 
         &__item-btn {
+            width: 210px;
+            height: 44px;
             margin-bottom: 20px;
         }
     }
@@ -107,8 +131,8 @@
 @media (max-width: 576px) {
     .training-list {
         &__item-title {
-            font-size: 25px;
-            line-height: 27px;
+            font-size: 20px;
+            line-height: 25px;
             margin-bottom: 15px;
         }
 
@@ -119,11 +143,37 @@
         }
 
         &__item-btn {
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         &__item-plan {
             gap: 20px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .training-list {
+        &__item-title {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__item_desc {
+            font-size: 13px;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+
+        &__item-btn {
+            margin-top: 15px;
+        }
+
+        &__item-plan {
+            gap: 20px;
+            p {
+                font-size: 15px;
+            }
         }
     }
 }
