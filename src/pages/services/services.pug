@@ -3,6 +3,7 @@ extends /src/layout
 
 block content
     section#services
+        img.services__bg-img(src="/src/assets/images/services-rubik.png" alt="services-rubik")
         .container
             .breadcrumbs
                 a(href='./') Главная
@@ -11,8 +12,7 @@ block content
                 p /
                 p.active Разрабатываем маркетинг-план: дорожная карта достижения целей
             .services__description
-                img.training__cube-img(src="/src/assets/icons/polygon.svg" alt="polygon")
-                img.training__bg-img(src="/src/assets/images/services-rubik.png" alt="services-rubik")
+                img.services__cube-img(src="/src/assets/icons/polygon.svg" alt="polygon")
                 p.description-text.col-lg-10.col-12 Разрабатываем маркетинг-план: дорожная карта достижения целей
                 .description-plans.col-xl-8
                     .plans-item
@@ -43,7 +43,7 @@ block content
                         br
                         br
                         | Основные этапы разработки
-                        span маркетинг-плана:
+                        span &nbsp; маркетинг-плана:
                     .programs-item
                         ul.services-ul
                             each title in gServicesPage

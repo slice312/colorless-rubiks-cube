@@ -1,19 +1,19 @@
 #services {
+    position: relative;
     background: #FFFFFF;
 
+    .services__bg-img {
+        position: absolute;
+        top: 54px;
+        right: 0;
+        z-index: 1;
+    }
     .services__description {
         margin-top: 10px;
         margin-bottom: 0;
         position: relative;
 
-        .training__bg-img {
-            position: absolute;
-            top: -80px;
-            right: 0;
-            z-index: 1;
-        }
-
-        .training__cube-img {
+        .services__cube-img {
             position: absolute;
             top: -30px;
             left: 40px;
@@ -111,6 +111,7 @@
                     max-width: 1115px;
                     position: relative;
                     z-index: 3;
+                    list-style-type: disc;
                 }
 
                 .services-li::marker {
@@ -122,7 +123,58 @@
     }
 }
 
-@media (max-width: 575.98px) {
+
+
+
+@media (max-width: 992px) {
+    #services {
+        .services__description {
+
+            .description-text {
+                font-size: 35px;
+                line-height: 40px;
+                margin: 0 0 20px 0;
+            }
+
+            .description-plans {
+                margin: 0 0 40px 50px;
+
+                .plans-item {
+                    gap: 20px;
+                }
+            }
+
+        }
+
+        .services__second-block {
+            margin: 60px 0 0 0;
+
+            .programs-text {
+                margin-bottom: 35px;
+            }
+
+            .programs-item {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .services__cube-img,
+    .services__bg-img {
+        display: none !important;
+    }
+
+    .description-text {
+        font-size: 30px !important;
+        line-height: 37px !important;
+    }
+}
+
+
+@media (max-width: 576px) {
     #services {
         padding-top: 20px;
 
@@ -164,57 +216,4 @@
             }
         }
     }
-
-
 }
-
-@media (max-width: 767.98px) {
-
-    .training__cube-img,
-    .training__bg-img {
-        display: none !important;
-    }
-
-    .description-text {
-        font-size: 30px !important;
-        line-height: 37px !important;
-    }
-}
-
-@media (max-width: 991.98px) {
-    #services {
-        .services__description {
-            .training__bg-img {}
-
-            .training__cube-img {}
-
-            .description-text {
-                font-size: 35px;
-                line-height: 40px;
-                margin: 0 0 20px 0;
-            }
-
-            .description-plans {
-                margin: 0 0 40px 50px;
-
-                .plans-item {
-                    gap: 20px;
-                }
-            }
-
-        }
-
-        .services__second-block {
-            margin: 60px 0 0 0;
-
-            .programs-text {
-                margin-bottom: 35px;
-            }
-
-            .programs-item {
-                margin-left: 0;
-            }
-        }
-    }
-}
-

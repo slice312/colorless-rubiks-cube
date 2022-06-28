@@ -3,6 +3,7 @@ extends /src/layout
 
 block content
     section.training-list
+        img.training-list__bg-img(src="/src/assets/images/services-rubik.png" alt="services-rubik")
         .container
             .breadcrumbs
                 a(href="./") Главная
@@ -10,7 +11,6 @@ block content
                 p.active Тренинги
             .training-list__items
                 img.training-list__cube-img(src="/src/assets/icons/polygon.svg" alt="polygon")
-                img.training-list__bg-img(src="/src/assets/images/services-rubik.png" alt="services-rubik")
                 each item in gTrainings
                     .training-list__item.row.col-md-12.col-12
                         .col-12.col-md-6

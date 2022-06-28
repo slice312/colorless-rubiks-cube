@@ -1,4 +1,13 @@
 .training-list {
+    position: relative;
+
+    &__bg-img {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        z-index: 1;
+    }
+
     &__items {
         position: relative;
         justify-content: center;
@@ -9,13 +18,6 @@
         position: absolute;
         top: -30px;
         left: 40px;
-        z-index: 1;
-    }
-
-    &__bg-img {
-        position: absolute;
-        top: -80px;
-        right: 0;
         z-index: 1;
     }
 

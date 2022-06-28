@@ -100,9 +100,11 @@
             font-size: 14px;
         }
 
-        &__input {
+        &__input-wrap {
             width: 90%;
-
+        }
+        &__input {
+            width: 100%;
             &::placeholder {
                 font-size: 14px;
             }
