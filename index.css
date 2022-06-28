@@ -1691,7 +1691,7 @@ body.modal-open {
   position: relative;
   margin-top: 10px;
   margin-bottom: 0;
-  padding-left: 25px;
+  padding-left: 70px;
 }
 #services .services__description .services__cube-img {
   position: absolute;
@@ -1786,6 +1786,11 @@ body.modal-open {
   color: #A5CBF9;
 }
 
+@media (max-width: 1400px) {
+  #services .services__description {
+    padding-left: 25px;
+  }
+}
 @media (max-width: 1200px) {
   #services .services__description .description-text {
     font-size: 35px;
