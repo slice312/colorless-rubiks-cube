@@ -12,7 +12,7 @@
         position: relative;
         margin-top: 10px;
         margin-bottom: 0;
-        padding-left: 25px;
+        padding-left: 70px;
 
         .services__cube-img {
             position: absolute;
@@ -99,6 +99,13 @@
     }
 }
 
+@media (max-width: 1400px) {
+    #services {
+        .services__description {
+            padding-left: 25px;
+        }
+    }
+}
 
 @media (max-width: 1200px) {
     #services {

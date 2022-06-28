@@ -70,10 +70,6 @@
         }
     }
 
-    &__input_error {
-        border: 1px solid #CF4747;
-    }
-
     &__input-error-label {
         height: 5px;
         @include font-face(Lato, 400, 14px, 17px, #CF4747);

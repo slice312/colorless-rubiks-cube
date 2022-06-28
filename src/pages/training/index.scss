@@ -20,7 +20,7 @@
         margin-top: 10px;
         margin-bottom: 130px;
         position: relative;
-        //padding-left: 15px;
+        padding-left: 23px;
 
         .training__cube-img {
             position: absolute;
@@ -37,7 +37,7 @@
         }
         .description-text {
             @include font-face(Montserrat, 700, 44px, 54px, $color-text-primary-1);
-            margin: 0 0 20px 60px;
+            margin: 0 0 20px 0px;
             text-align: left;
             position: relative;
             z-index: 3;
@@ -45,16 +45,16 @@
 
         .description-descr {
             @include font-face(Lato, 400, 18px, 22px, $color-text-primary-1);
-            margin: 0 0 5px 60px;
+            margin: 0 0 5px 0px;
         }
 
         .description-descrs {
             @include font-face(Lato, 400, 18px, 22px, $color-text-primary-1);
-            margin: 0 0 30px 60px;
+            margin: 0 0 30px 0px;
         }
 
         .description-plans {
-            margin: 0 0 40px 105px;
+            margin: 0 0 40px 38px;
 
             .plans-item {
                 gap: 41px;
@@ -73,7 +73,7 @@
         }
 
         .description-button {
-            margin-left: 105px;
+            margin-left: 35px;
             width: 287px;
             height: 48px;
 
@@ -93,7 +93,7 @@
     }
 
     .training__programs {
-        margin: 165px 0 0 62px;
+        margin: 165px 0 0 0px;
 
         .programs-text {
             @include font-face(Montserrat, 700, 30px, 37px, $color-text-primary-1);
@@ -121,6 +121,7 @@
                 .programs-li {
                     @include font-face(Lato, 400, 17px, 20px, $color-text-primary-1);
                     margin-bottom: 10px;
+                    margin-left: 30px;
                     max-width: 1115px;
                     position: relative;
                     z-index: 3;
@@ -131,6 +132,105 @@
                         color: #A5CBF9;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .training {
+        .training__description {
+            padding-left: 0;
+            .training__cube-img {
+                position: absolute;
+                top: -40px;
+                left: -40px;
+                z-index: 1;
+            }
+
+            .description-text {
+                font-size: 35px;
+                line-height: 40px;
+                margin: 0 0 20px 0;
+            }
+
+            .description-descr {
+                margin: 0 0 5px 0;
+            }
+
+            .description-descrs {
+                margin: 0 0 30px 0;
+            }
+
+            .description-plans {
+                margin: 0 0 40px 50px;
+
+            }
+
+            .description-button {
+                margin-left: 50px;
+            }
+        }
+
+        .training__programs {
+            margin: 165px 0 0 0;
+
+            .programs-text {
+                margin-bottom: 45px;
+            }
+
+            .programs-item {
+                margin-bottom: 42px;
+
+                .programs-title {
+                    margin-bottom: 20px;
+                }
+
+                .programs-process {
+                    margin: 0 0 20px 42px;
+
+                }
+
+                .programs-ul {
+                    margin-left: 38px;
+
+                    .programs-li {
+                        margin-bottom: 10px;
+                        max-width: 1115px;
+                    }
+
+                    .programs-li::marker {
+                        font-size: 35px;
+                        color: #A5CBF9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .training__line-img {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .training__cube-img,
+    .training__bg-img,
+    .training__bg-cube,
+    .training__line-img {
+        display: none ;
+    }
+
+    .training {
+        .training__description {
+            .description-text {
+                font-size: 31px;
+                line-height: 40px;
             }
         }
     }
@@ -194,87 +294,6 @@
 
                 .programs-ul {
                     margin-left: 0 !important;
-
-                    .programs-li::marker {
-                        font-size: 35px;
-                        color: #A5CBF9;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-
-    .training__cube-img,
-    .training__bg-img,
-    .training__bg-cube,
-    .training__line-img {
-        display: none ;
-    }
-}
-
-@media (max-width: 992px) {
-    .training {
-        .training__description {
-            .training__cube-img {
-                position: absolute;
-                top: -40px;
-                left: -40px;
-                z-index: 1;
-            }
-
-            .description-text {
-                font-size: 35px;
-                line-height: 40px;
-                margin: 0 0 20px 0;
-            }
-
-            .description-descr {
-                margin: 0 0 5px 0;
-            }
-
-            .description-descrs {
-                margin: 0 0 30px 0;
-            }
-
-            .description-plans {
-                margin: 0 0 40px 50px;
-
-            }
-
-            .description-button {
-                margin-left: 50px;
-            }
-        }
-
-        .training__programs {
-            margin: 165px 0 0 0;
-
-            .programs-text {
-                margin-bottom: 45px;
-            }
-
-            .programs-item {
-                margin-bottom: 42px;
-
-                .programs-title {
-                    margin-bottom: 20px;
-                }
-
-                .programs-process {
-                    margin: 0 0 20px 42px;
-
-                }
-
-                .programs-ul {
-                    margin-left: 38px;
-
-                    .programs-li {
-                        margin-bottom: 10px;
-                        max-width: 1115px;
-                    }
 
                     .programs-li::marker {
                         font-size: 35px;

@@ -51,9 +51,9 @@ export class Validator {
         const {errorText} = this.#fields[fieldName];
 
         if (errorText)
-            input.classList.add("modal-order__input_error");
+            input.classList.add("input_error");
         else
-            input.classList.remove("modal-order__input_error");
+            input.classList.remove("input_error");
 
         status.textContent = errorText;
     };
