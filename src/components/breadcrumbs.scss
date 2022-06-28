@@ -17,10 +17,17 @@
     }
 }
 
+@media (max-width: 992px) {
+    .breadcrumbs {
+        padding-left: 0;
+    }
+}
+
 
 @media (max-width: 769px) {
     .breadcrumbs {
         padding: 20px 26px;
+        padding-left: 0;
     }
 }
 

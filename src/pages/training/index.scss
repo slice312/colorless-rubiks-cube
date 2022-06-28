@@ -20,6 +20,7 @@
         margin-top: 10px;
         margin-bottom: 130px;
         position: relative;
+        //padding-left: 15px;
 
         .training__cube-img {
             position: absolute;
@@ -37,6 +38,7 @@
         .description-text {
             @include font-face(Montserrat, 700, 44px, 54px, $color-text-primary-1);
             margin: 0 0 20px 60px;
+            text-align: left;
             position: relative;
             z-index: 3;
         }
