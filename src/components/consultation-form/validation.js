@@ -1,5 +1,6 @@
 import {Rule, Validator} from "/src/service/validation";
 
+
 const fields = Object.freeze({
     name: {
         elements: {

@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 
 const pagesDir = `${path.resolve(__dirname, "src")}/pages/`;
 
@@ -55,7 +56,7 @@ const devConfig = {
     },
     plugins: [
         ...pages.map((page) => {
-            return new HtmlWebpackPlugin({
+            return new HtmlPlugin({
                 template: path.join(pagesDir, page),
                 filename: `./${path.basename(page.replace(/\.pug/, ".html"))}`,
             });
