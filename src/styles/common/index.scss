@@ -9,8 +9,6 @@
 // TODO: удалить
 @media (min-width: 1440px) {
     .my-container {
-        //max-width: 82%;
-        //max-width: 1200px;
         margin: 0 auto;
     }
 }
@@ -21,7 +19,16 @@
     scroll-behavior: smooth;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
 
 body.modal-open {
     overflow: hidden;
+}
+
+.content {
+    flex: 1 0 auto;
 }
